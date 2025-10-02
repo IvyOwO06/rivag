@@ -1,12 +1,49 @@
 [viewBag]
 ==
 <?php
-if$_SERVER[METHOD] == POST{
-    
-}
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $naam = $_POST['naam'];
+//     echo $naam
+// }
 ?>
 ==
-<form action="post">
-    <label for="naam">Naam:</label>
-    <input type="text" name="naam" id="naam">
+<form action="" method="post">
+    <div class="form" id="formTop">
+        <label for="naam">Naam:</label>
+        <input type="text" name="naam" id="naam" required><br>
+        <label for="adress">Adres:</label>
+        <input type="text" name="adress" id="adress" required><br>
+        <label for="postcode">Postcode:</label>
+        <input type="text" name="postcode" id="postcode" required><br>
+        <label for="plaats">Plaats:</label>
+        <input type="text" name="plaats" id="plaats" required><br>
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="telefoon">Telefoon nummer:</label>
+        <input type="tel" name="telefoon" id="telefoon"><br>
+        <label for="fax">Fax:</label>
+        <input type="tel" name="fax" id="fax"><br>
+    </div><br><br>
+    <div class="form" id="formBottom">
+        <label for="vacature">Vacature:</label>
+        <select name="vacature" id="vacature">
+            <option value="">Maak hier uw keuze</option>
+            <option value="kraanmachinist">Kraanmachinist</option>
+            <option value="torenkraanmachinist">Torenkraanmachinist</option>
+            <option value="rups-hijskraanmachinist">Rups Hijskraanmachinist</option>
+            <option value="mobiele-hijskraanmachinist">Mobiele Hijskraanmachinist</option>
+        </select><br>
+        <label for="regio">Regio:</label>
+        <select name="regio" id="regio">
+            <option value="">Maak hier uw keuze</option>
+            <option value="utrecht">Utrecht</option>
+            <option value="randstad">Randstad</option>
+            <option value="zuid-oost-nederland">Zuid-Oost Nederland</option>
+            <option value="belgie">België</option>
+        </select><br>
+        <label for="opmerking">Opmerkingen:</label>
+        <textarea name="opmerking" id="opmerking"></textarea>
+        <input type="submit" name="submit" id="submit">
+        <input type="reset" name="reset" id="reset">
+    </div>
 </form>
