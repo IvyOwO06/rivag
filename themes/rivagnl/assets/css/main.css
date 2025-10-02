@@ -1,0 +1,16 @@
+:root {
+    --light-blue:  rgb(221, 237, 255);
+    --dark-blue: rgb(0, 51, 102);
+}
+
+body {
+    background-color: var(--light-blue);
+}
+
+header {
+    background-color: var(--dark-blue);
+}
+
+h1 {
+    text-transform: uppercase;
+}
