@@ -1,4 +1,13 @@
-[viewBag]
+[emptyForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
 ==
 <?php
 // if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -7,7 +16,7 @@
 // }
 ?>
 ==
-<form action="" method="post">
+{# <form action="" method="post">
     <div class="form" id="formTop">
         <label for="naam">Naam:</label>
         <input type="text" name="naam" id="naam" required><br>
@@ -46,4 +55,6 @@
         <input type="submit" name="submit" id="submit">
         <input type="reset" name="reset" id="reset">
     </div>
-</form>
+</form> #}
+
+{% component 'emptyForm' %}

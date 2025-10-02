@@ -1,12 +1,50 @@
-<h3>Here goes your custom form</h3>
-<p>Override HTML by creating a new partial called <strong>default.htm</strong> (more info <a href="https://octobercms.com/docs/cms/components#overriding-partials" target="_blank">here</a>)</p>
-<p>You can copy/paste this basic template:</p>
-<pre>
-    &lt;form data-request="&lbrace;&lbrace; __SELF__ }}::onFormSubmit"&gt;
-        &lbrace;&lbrace; form_token() &rbrace;&rbrace;
-        &lt;div id="&lbrace;&lbrace; __SELF__ &rbrace;&rbrace;_forms_flash"&gt;&lt;/div&gt;
-        &lt;!-- YOUR FORM FIELDS --&gt;
-        &lbrace;% partial '@recaptcha' %}
-        &lt;!-- SUBMIT BUTTON --&gt;
-    &lt;/form&gt;
-</pre>
+<form data-request="{{ __SELF__ }}::onFormSubmit">
+
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+    <div class="form" id="formTop">
+        <label for="naam">Naam:</label>
+        <input type="text" name="naam" id="naam" required><br>
+        <label for="adress">Adres:</label>
+        <input type="text" name="adress" id="adress" required><br>
+        <label for="postcode">Postcode:</label>
+        <input type="text" name="postcode" id="postcode" required><br>
+        <label for="plaats">Plaats:</label>
+        <input type="text" name="plaats" id="plaats" required><br>
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="telefoon">Telefoon nummer:</label>
+        <input type="tel" name="telefoon" id="telefoon"><br>
+        <label for="fax">Fax:</label>
+        <input type="tel" name="fax" id="fax"><br>
+    </div><br><br>
+    <div class="form" id="formBottom">
+        <label for="vacature">Vacature:</label>
+        <select name="vacature" id="vacature">
+            <option value="">Maak hier uw keuze</option>
+            <option value="kraanmachinist">Kraanmachinist</option>
+            <option value="torenkraanmachinist">Torenkraanmachinist</option>
+            <option value="rups-hijskraanmachinist">Rups Hijskraanmachinist</option>
+            <option value="mobiele-hijskraanmachinist">Mobiele Hijskraanmachinist</option>
+        </select><br>
+        <label for="regio">Regio:</label>
+        <select name="regio" id="regio">
+            <option value="">Maak hier uw keuze</option>
+            <option value="utrecht">Utrecht</option>
+            <option value="randstad">Randstad</option>
+            <option value="zuid-oost-nederland">Zuid-Oost Nederland</option>
+            <option value="belgie">België</option>
+        </select><br>
+        <label for="opmerking">Opmerkingen:</label>
+        <textarea name="opmerking" id="opmerking"></textarea>
+    </div>
+
+    <div class="form-group">
+        {% partial '@recaptcha' %}
+    </div>
+
+    <button id="simpleContactSubmitButton" type="submit" class="btn btn-default">Submit</button>
+
+</form>
