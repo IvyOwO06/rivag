@@ -1,39 +1,160 @@
 :root {
-    --light-blue: rgb(221, 237, 255);
-    --dark-blue: rgb(0, 51, 102);
+    --white: #ffffff;
+    --black: #000000;
+
+    --lighter-blue:#e7f2ff;
+    --light-blue: #a5cfff;
+    --lighty-blue: #87a5c8;
+    --blue: #6994c5;
+    --mid-blue:#33669993;
+    --dark-blue: #003366;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--light-blue);
+    background-image: linear-gradient(to bottom right, #b1ceef, #e7f2ff);
+    display: flex;
+    flex-direction: column;
+    min-height: 200vh;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header {
-  background-color: var(--dark-blue);
-  text-align: center; 
-  top: 0;
-  width: 100%;
-  height: 10vh;
+    background-color: var(--dark-blue);
+    box-shadow: 0 0.5vw 0.5vw var(--mid-blue);
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 7%;
 }
 
 header h1 {
-  color: var(--light-blue);
-  font-size: 32px;
-  margin: 0;
-  text-decoration: none;
+    color: var(--blue);
+    font-size: 54px;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-nav ul, nav ul a {
-  color: var(--light-blue);
-  list-style: none; 
-  padding: 0;
-  margin: 10px 0 0 0; 
-  display: flex;
-  justify-content: center; 
-  gap: 4%; 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    list-style: none;
+    margin-top: -0%;
+    margin-bottom: 1%;
+    padding: 0;
+    gap: 4%;
 }
 
 nav li {
-  color: var(--light-blue);
-  font-size: 12px;
-  cursor: pointer;
+    color: var(--light-blue);
+    font-size: 18px;
+}
+
+form {
+    margin-top: 10%;
+}
+
+main {
+    flex: 1; 
+}
+
+.welkomContainer {
+  display: flex;
+  align-items: center;           
+  justify-content: space-between;
+  margin: auto;
+  border-radius: 1rem;
+  color: var(--white);
+}
+
+.welkom-text {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+  justify-content: center;
+  text-align: left;         
+  gap: 2%;   
+  margin-left: 25%;
+  margin-bottom: 8%;                    
+}
+
+#welkom {
+  font-size: 50px;           
+  margin: 0;
+  line-height: 105%;
+  color: var(--mid-blue);
+}
+
+.welkom-text p {
+  margin: 1% 0 2%;           
+  color: var(--lighty-blue);
+  font-weight: bold;
+}
+
+#bedieningen {
+  list-style: square;
+  margin: 2% 0 0;
+  color: var(--black);
+  width: 100%;
+  padding: 5%;
+}
+
+#bedieningen li {
+  margin: 1% 0;
+}
+
+.welkomContainer img { 
+  max-width: 30%;
+  height: auto;
+  border-radius: 6px;
+  margin-right: 20%;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.18);
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .welkomContainer {
+    flex-direction: column-reverse;
+    padding: 2.5rem 4%;
+    gap: 1.5rem;
+  }
+  .hero-text {
+    padding-right: 0;
+  }
+  .welkomContainer img {
+    width: 80%;
+    max-width: 420px;
+    flex: none;
+  }
+  #welkom { font-size: 2.25rem; }
+}
+
+
+footer {
+    background-color: var(--dark-blue);
+    box-shadow: 0 0.5vw 0.5vw var(--mid-blue);
+    color: var(--white);
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    margin-top: 5%;
+}
+
+footer a {
+  color: var(--white);
 }
