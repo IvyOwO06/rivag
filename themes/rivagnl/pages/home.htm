@@ -1,18 +1,35 @@
 url = "/"
+layout = "default"
 title = "Home"
+
+[genericForm]
+rules[name] = "required|regex:/^[A-Za-zÀ-ÿ'’\- ]{2,100}$/u"
+rules[adress] = "required"
+rules[postcode] = "required"
+rules[plaats] = "required"
+rules[email] = "required|email"
+rules[telefoon] = "regex:/^(\+?[0-9]{1,3}[\s\-]?[0-9\s\-]{5,15})$/"
+rules[fax] = "regex:/^(\+?[0-9]{1,3}[\s\-]?[0-9\s\-]{5,15})$/"
+rules_messages[name.required] = "Naam is vereist"
+rules_messages[name.regex] = "Naam is ongeldig"
+rules_messages[adress.required] = "Adres is vereist"
+rules_messages[postcode.required] = "Postcode is vereist"
+rules_messages[plaats.required] = "Plaats is vereist"
+rules_messages[email.required] = "E-mail is vereist"
+rules_messages[email.email] = "Ongeldig mail adres"
+rules_messages[telefoon.regex] = "Telefoon nummer is ongeldig"
+rules_messages[fax.regex] = "Fax nummer is ongeldig"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 0
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "htmlspecialchars"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
 ==
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ "assets/css/main.css" | theme }}>
-    <title>Document</title>
-</head>
-<body>
-    {% partial "header" %}
-    {% partial "test" %}
-    {% partial "contact" %}
-    {% partial "footer" %}
-</body>
-</html>
+{% partial "test" %}
+{% partial "contact" %}
