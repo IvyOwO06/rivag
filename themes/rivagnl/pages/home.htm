@@ -3,24 +3,24 @@ layout = "default"
 title = "Home"
 
 [genericForm]
-rules[name] = "required|regex:/^[A-Za-zÀ-ÿ'’\- ]{2,100}$/u"
-rules[adress] = "required"
+rules[naam] = "required|regex:/^[A-Za-zÀ-ÿ'’\- ]{2,100}$/u"
+rules[adres] = "required"
 rules[postcode] = "required"
 rules[plaats] = "required"
 rules[email] = "required|email"
 rules[telefoon] = "regex:/^(\+?[0-9]{1,3}[\s\-]?[0-9\s\-]{5,15})$/"
 rules[fax] = "regex:/^(\+?[0-9]{1,3}[\s\-]?[0-9\s\-]{5,15})$/"
-rules_messages[name.required] = "Naam is vereist"
-rules_messages[name.regex] = "Naam is ongeldig"
-rules_messages[adress.required] = "Adres is vereist"
-rules_messages[postcode.required] = "Postcode is vereist"
-rules_messages[plaats.required] = "Plaats is vereist"
-rules_messages[email.required] = "E-mail is vereist"
-rules_messages[email.email] = "Ongeldig mail adres"
-rules_messages[telefoon.regex] = "Telefoon nummer is ongeldig"
-rules_messages[fax.regex] = "Fax nummer is ongeldig"
-messages_success = "Your form was successfully submitted"
-messages_errors = "There were errors with your submission"
+rules_messages[name.required] = "naam.contact.vereist"
+rules_messages[name.regex] = "naam.contact.ongeldig"
+rules_messages[adress.required] = "adres.contact.vereist"
+rules_messages[postcode.required] = "postcode.contact.vereist"
+rules_messages[plaats.required] = "plaats.contact.vereist"
+rules_messages[email.required] = "email.contact.vereist"
+rules_messages[email.email] = "email.contact.ongeldig"
+rules_messages[telefoon.regex] = "telefoon.contact.ongeldig"
+rules_messages[fax.regex] = "fax.contact.ongeldig"
+messages_success = "bericht.contact.succes"
+messages_errors = "bericht.contact.error"
 mail_enabled = 0
 reset_form = 1
 inline_errors = "disabled"
@@ -30,6 +30,8 @@ recaptcha_theme = "light"
 recaptcha_type = "image"
 recaptcha_size = "normal"
 emails_date_format = "Y-m-d"
+
+[sitePicker]
 ==
 {% partial "test" %}
 {% partial "contact" %}
