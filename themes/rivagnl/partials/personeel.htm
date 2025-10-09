@@ -1,4 +1,7 @@
-<div id="informatie">
+<div id="personeel_informatie">
+    <section class="personeel">
+        {{ 'personeel.informatie' |_ }}
+    </section>
     <p>{{ 'personeel.info.informatie' |_ }}</p>
     <p>{{ 'personeel.info.taken' |_ }}<p>
     <ul>
@@ -18,8 +21,11 @@
     <p>{{ 'personeel.info.persoonlijkekwaliteiten' |_ }}</p>
     <p>{{ 'personeel.info.fysiekekwaliteiten' |_ }}</p>
 </div>
-<div id="eisen">
-    <p><strong>{{ 'personeel.eisen' |_ }}</strong></p>
+<div id="personeel_eisen">
+    <section class="personeel">
+        {{ 'personeel.eisen' |_ }}
+    </section>
+    <p><strong>{{ 'personeel.eisen.eisen' |_ }}</strong></p>
     <ul>
         <li>{{ 'personeel.eisen.eis.1' |_ }}</li>
         <li>{{ 'personeel.eisen.eis.2' |_ }}</li>
@@ -32,7 +38,10 @@
     </ul>
     <p>{{ 'personeel.eisen.info' |_ }}</p>
 </div>
-<div id="vacatures">
+<div id="personeel_vacatures">
+    <section class="personeel">
+        {{ 'personeel.vacatures' |_ }}
+    </section>
     <p><strong>{{ 'personeel.vacatures.gevraagd' |_ }}</strong></p>
     <p>{{ 'personeel.vacatures.zoeken' |_ }}</p>
     <ul>
