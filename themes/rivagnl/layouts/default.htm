@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ "assets/css/main.css" | theme }}>
+    <link rel="stylesheet" href={{ [
+        'assets/css/main.css'
+    ] | theme }}>
     <title>Rivag</title>
 </head>
 <body>
@@ -12,7 +14,9 @@
     {% page %}
     {% partial "footer" %}
 
-    
+    <script href={{ [
+        'assets/js/header.js'
+        ] | theme }}></script>
     {% framework %}
     {% framework extras %}
 </body>
