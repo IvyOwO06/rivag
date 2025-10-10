@@ -45,99 +45,101 @@
     </div>
 </form>
 #}
+<div id="contact_form">
+    <form data-request="{{ genericForm }}::onFormSubmit"
+    action="post">
+        {{ form_token() }}
 
-<form data-request="{{ genericForm }}::onFormSubmit"
-action="post">
-    {{ form_token() }}
+        <div id="{{ genericForm }}_forms_flash"></div>
 
-    <div id="{{ genericForm }}_forms_flash"></div>
+        <div class="form" id="formTop">
+            <div class="form-group">
+                <label for="naam">{{ 'contact.naam' |_ }}</label>
+                <input type="text" name="naam" id="naam" class="form-control">
+            <div class="form-group">
+                <label for="adres">{{ 'contact.adres' |_ }}</label>
+                <input type="text" id="adres" name="adres" class="form-control" />
+            </div>
 
-    <div class="form" id="formTop">
-        <div class="form-group">
-            <label for="naam">{{ 'contact.naam' |_ }}</label>
-            <input type="text" name="naam" id="naam" class="form-control">
-        <div class="form-group">
-            <label for="adres">{{ 'contact.adres' |_ }}</label>
-            <input type="text" id="adres" name="adres" class="form-control" />
+            <div class="form-group">
+                <label for="postcode">{{ 'contact.postcode' |_ }}</label>
+                <input
+                    type="text"
+                    id="postcode"
+                    name="postcode"
+                    class="form-control"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="plaats">{{ 'contact.plaats' |_ }}</label>
+                <input type="text" id="plaats" name="plaats" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">{{ 'contact.email' |_ }}</label>
+                <input type="text" id="email" name="email" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="telefoon">{{ 'contact.telefoon' |_ }}</label>
+                <input
+                    type="tel"
+                    id="telefoon"
+                    name="telefoon"
+                    class="form-control"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="fax">{{ 'contact.fax' |_ }}</label>
+                <input type="tel" id="fax" name="fax" class="form-control" />
+            </div>
         </div>
+        <br /><br />
+        <div class="form" id="formBottom">
+            <div class="form-group">
+                <label for="vacature">{{ 'contact.vacature' |_ }}</label>
+                <select name="vacature" id="vacature" class="form-control">
+                <option value="">{{ 'contact.vacature.keuze' |_ }}</option>
+                <option value="kraanmachinist">{{ 'contact.kraanmachinist.keuze' |_ }}</option>
+                <option value="torenkraanmachinist">{{ 'contact.torenkraanmachinist.keuze' |_ }}</option>
+                <option value="rups-hijskraanmachinist">
+                    {{ 'cotnact.rupshijskraanmachinist.keuze' |_ }}
+                </option>
+                <option value="mobiele-hijskraanmachinist">
+                    {{ 'contact.mobielehijskraanmachinist.keuze' |_ }}
+                </option></select
+            ><br />
+            </div>
 
-        <div class="form-group">
-            <label for="postcode">{{ 'contact.postcode' |_ }}</label>
-            <input
-                type="text"
-                id="postcode"
-                name="postcode"
-                class="form-control"
-            />
+            <div class="form-group">
+                <label for="regio">{{ 'contact.regio' |_ }}</label>
+            <select name="regio" id="regio" class="form-control">
+                <option value="">{{ 'contact.regio.keuze' |_ }}</option>
+                <option value="utrecht">{{ 'contact.utrecht.keuze' |_ }}</option>
+                <option value="randstad">{{ 'contact.randstad.keuze' |_ }}</option>
+                <option value="zuid-oost-nederland">{{ 'contact.zonederland.keuze' |_ }}</option>
+                <option value="belgie">{{ 'contact.belgie.keuze' |_ }}</option></select
+            ><br />
+            </div>
+
+            <div class="form-group">
+                <label for="opmerking">{{ 'contact.opmerking' |_ }}</label>
+            <textarea name="opmerking" id="opmerking" class="form-control"></textarea>
+            </div>
+
+            {# <div class="form-group">{% partial '@recaptcha' %}</div> #}
         </div>
+        <br />
 
-        <div class="form-group">
-            <label for="plaats">{{ 'contact.plaats' |_ }}</label>
-            <input type="text" id="plaats" name="plaats" class="form-control" />
-        </div>
-
-        <div class="form-group">
-            <label for="email">{{ 'contact.email' |_ }}</label>
-            <input type="text" id="email" name="email" class="form-control" />
-        </div>
-
-        <div class="form-group">
-            <label for="telefoon">{{ 'contact.telefoon' |_ }}</label>
-            <input
-                type="tel"
-                id="telefoon"
-                name="telefoon"
-                class="form-control"
-            />
-        </div>
-
-        <div class="form-group">
-            <label for="fax">{{ 'contact.fax' |_ }}</label>
-            <input type="tel" id="fax" name="fax" class="form-control" />
-        </div>
-    </div>
-    <br /><br />
-    <div class="form" id="formBottom">
-        <div class="form-group">
-            <label for="vacature">{{ 'contact.vacature' |_ }}</label>
-            <select name="vacature" id="vacature" class="form-control">
-            <option value="">{{ 'contact.vacature.keuze' |_ }}</option>
-            <option value="kraanmachinist">{{ 'contact.kraanmachinist.keuze' |_ }}</option>
-            <option value="torenkraanmachinist">{{ 'contact.torenkraanmachinist.keuze' |_ }}</option>
-            <option value="rups-hijskraanmachinist">
-                {{ 'cotnact.rupshijskraanmachinist.keuze' |_ }}
-            </option>
-            <option value="mobiele-hijskraanmachinist">
-                {{ 'contact.mobielehijskraanmachinist.keuze' |_ }}
-            </option></select
-        ><br />
-        </div>
-
-        <div class="form-group">
-            <label for="regio">{{ 'contact.regio' |_ }}</label>
-        <select name="regio" id="regio" class="form-control">
-            <option value="">{{ 'contact.regio.keuze' |_ }}</option>
-            <option value="utrecht">{{ 'contact.utrecht.keuze' |_ }}</option>
-            <option value="randstad">{{ 'contact.randstad.keuze' |_ }}</option>
-            <option value="zuid-oost-nederland">{{ 'contact.zonederland.keuze' |_ }}</option>
-            <option value="belgie">{{ 'contact.belgie.keuze' |_ }}</option></select
-        ><br />
-        </div>
-
-        <div class="form-group">
-            <label for="opmerking">{{ 'contact.opmerking' |_ }}</label>
-        <textarea name="opmerking" id="opmerking" class="form-control"></textarea>
-        </div>
-
-        {# <div class="form-group">{% partial '@recaptcha' %}</div> #}
-    </div>
-    <br />
-
-    <button
-        id="simpleContactSubmitButton"
-        type="submit"
-        class="btn btn-default"
-    >
-        {{ 'contact.submit' |_ }}
-    </button>
-</form>
+        <button
+            id="simpleContactSubmitButton"
+            type="submit"
+            class="btn btn-default"
+        >
+            {{ 'contact.submit' |_ }}
+        </button>
+    </form>
+</div>
+</div>

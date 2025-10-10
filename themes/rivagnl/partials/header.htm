@@ -3,17 +3,13 @@
         <h1>RIVAG</h1>
     </a>
     <nav>
-        <!-- <ul>
-            <li><a href="#welkom">Welkom</a></li>
-        </ul> -->
         <ul>
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
+            <li><a href="#bedrijf">{{ 'header.nav.bedrijf' |_ }}</a></li>
+            <li><a href="#personeel">{{ 'header.nav.personeel' |_ }}</a></li>
+            <li><a href="#contact">{{ 'header.nav.contact' |_ }}</a></li>
         </ul>
 
-            {% component 'sitePicker' %}
-
+        {% component 'sitePicker' %}
 
     </nav>
 </header>
