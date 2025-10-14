@@ -1,14 +1,15 @@
 :root {
-    --white: #ffffff;
-    --black: #000000;
+    --white: #fefefefe;
+    --black: #0c0c0c;
 
-    --lighter-blue:#e7f2ff;
-    --light-blue: #a5cfff;
-    --lighty-blue: #87a5c8;
-    --blue: #6994c5;
-    --mid-blue:#33669993;
-    --dark-blue: #003366;
+    --light-blue: #dbecff;
+    --not-light-blue: hsl(212, 50%, 80%);
+    --light-blue-t: hsla(212, 100%, 93%, 0.63);
 
+    --blue: #336699;
+    --mid-blue: hsl(210, 50%, 35%);
+
+    --dark-blue: hsl(210, 100%, 20%);
 }
 
 html {
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to bottom right, #b1ceef, #f6faff);
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     min-height: 200vh;
@@ -26,17 +27,15 @@ body {
 
 header {
     background-color: var(--dark-blue);
-    box-shadow: 0 0.5vw 0.5vw var(--mid-blue);
     text-align: center;
     top: 0;
     width: 100%;
     padding-bottom: 0.5%;
-    margin-bottom: 6%;
 }
 
 header h1 {
-    color: var(--blue);
-    font-size: 54px;
+    color: var(--not-light-blue);
+    font-size: 3rem;
     margin: 0;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
@@ -44,7 +43,7 @@ header h1 {
 
 header a {
     text-decoration: none;
-    color: inherit;
+    color: var(--light-blue-t);
 }
 
 nav ul {
@@ -52,15 +51,16 @@ nav ul {
     justify-content: center;
     text-transform: uppercase;
     list-style: none;
-    margin-top: -0%;
-    margin-bottom: 1%;
     padding: 0;
+    padding-bottom: 2%;
+    margin: 0;
     gap: 4%;
 }
 
 nav li {
-    color: var(--light-blue);
-    font-size: 18px;
+    color: var();
+    text-transform: lowercase;
+    font-size: 1rem;
 }
 
 form {
@@ -72,73 +72,33 @@ main {
 }
 
 .welkomContainer {
+  background-color: var(--mid-blue);
+  /* box-shadow: var(--mid-blue) 0px 19px 38px, var(--mid-blue) 0px 15px 12px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
   align-items: center;           
-  color: var(--white);
   gap: 3rem;
+  padding-top: 5%;
   padding-bottom: 5%;
 }
 
 .welkomContainer img { 
-  width: 25%;
+  width: 90%;
   height: auto;
   border-radius: 6px;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,0.18);
+  box-shadow: 0 1rem 2rem hsla(0, 0, 0);
 } 
 
-.welkom-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;  
-  text-align: left;         
-  margin-bottom: 1%;
-  max-width: 50%;
-}
-
 #welkom {
-  font-size: 60px;           
+  font-size: 2.5rem;   
   margin: 0;
-  color: var(--mid-blue);
-}
-
-.welkom-text p {  
-  font-size: 15px;  
-  padding: 1%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  max-width: 45ch;
-  margin: 0;  
-  color: var(--mid-blue);
-  text-shadow: 1px 1px 2px #7e92cc69;
-}
-
-
-.welkom-text h2 {  
-  font-size: 16px;  
-  margin: 0;
-  margin-left: 1%;
-  color: var(--lighty-blue);
-  font-weight: bold;
-}
-
-#bedieningen {
-  margin: 0;
-  list-style: square;
-  color: var(--lighty-blue);
-  text-shadow: 1px 1px 2px #829be469;
-  width: 100%;
-  padding: 2%;
-}
-
-#bedieningen li {
-  margin-left: 2%;
+  color: var(--not-light-blue);
 }
 
 footer {
     background-color: var(--dark-blue);
-    box-shadow: 0 0.5vw 0.5vw var(--mid-blue);
     color: var(--white);
     text-align: center;
     align-items: baseline;
@@ -153,10 +113,10 @@ footer a {
   color: var(--white);
 }
 
-.personeel{
+/* .personeel{
   background-color: var(--dark-blue);
   color: var(--white);
   padding: 0.5%;
   text-align: center;
-}
+} */
 
