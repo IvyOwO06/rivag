@@ -14,9 +14,11 @@
     {% page %}
     {% partial "footer" %}
 
-    <script href={{ [
-        'assets/js/header.js'
+    <script src={{ [
+        'assets/js/header.js',
+        'assets/js/lang.js'
         ] | theme }}></script>
+        <script>lang_picker()</script>
     {% framework %}
     {% framework extras %}
 </body>
