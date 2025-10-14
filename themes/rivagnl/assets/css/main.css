@@ -27,10 +27,18 @@ body {
 
 header {
     background-color: var(--dark-blue);
-    text-align: center;
-    top: 0;
+    display: flex;              
+    align-items: center;         
+    justify-content: center;
+    padding-bottom: 1%;
     width: 100%;
-    padding-bottom: 0.5%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.header-center {
+  text-align: center;
+  flex: 1;
 }
 
 header h1 {
@@ -52,7 +60,6 @@ nav ul {
     text-transform: uppercase;
     list-style: none;
     padding: 0;
-    padding-bottom: 2%;
     margin: 0;
     gap: 4%;
 }
@@ -112,6 +119,14 @@ footer {
 footer a {
   color: var(--white);
 }
+
+#langLink {
+  position: absolute;
+  right: 2%;
+  top: 50%;  
+  transform: translateY(-50%);          
+}
+
 
 /* .personeel{
   background-color: var(--dark-blue);

@@ -9,14 +9,14 @@ function lang_picker() {
         console.log("Nederlands");
         langLink.href = window.location.origin + '/en';
         langLink.innerHTML = `
-            <img alt="English Flag" src="/themes/rivagnl/assets/img/en-flag-circle.svg" height="64" width="64" />
+            <img alt="English Flag" src="/themes/rivagnl/assets/img/en-flag-circle.svg" height="48" width="48" />
         `
     }
     else if (path == "/en") {
         console.log("English")
         langLink.href = window.location.origin;
         langLink.innerHTML = `
-            <img alt="Nederlandse vlag" src="/themes/rivagnl/assets/img/nl-flag-circle.svg" height="64" width="64" />
+            <img alt="Nederlandse vlag" src="/themes/rivagnl/assets/img/nl-flag-circle.svg" height="48" width="48" />
         `
     }
 }
