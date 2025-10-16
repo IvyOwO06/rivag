@@ -1,15 +1,27 @@
 <header>
-<a id="langLink" href=""><img id="langImg" src="" alt=""></a>
-
-<div class="header-center">
-    <a href=""><h1>RIVAG</h1></a>
-    <nav>
-    <ul>
-        <li><a href="#bedrijf">{{ 'header.nav.bedrijf' |_ }}</a></li>
-        <li><a href="#personeel">{{ 'header.nav.personeel' |_ }}</a></li>
-        <li><a href="#contact">{{ 'header.nav.contact' |_ }}</a></li>
-        <li><a href="mailto:info@rivag.nl">{{ 'header.nav.mail' |_ }}</a></li>
-    </ul>
+    <div class="mobile-header">
+        <div class="logo"><h1>RIVAG</h1></div>
+        <button class="hamburger" id="menu-btn" aria-label="Toggle menu">
+            <span></span> <span></span> <span></span>
+        </button>
+    </div>
+    <nav class="header-right" id="nav-menu">
+        <ul>
+            <li><a href="#bedrijf">{{ 'header.nav.bedrijf' |_ }}</a></li>
+            <li><a href="#personeel">{{ 'header.nav.personeel' |_ }}</a></li>
+            <li><a href="#contact">{{ 'header.nav.contact' |_ }}</a></li>
+            <li>
+                <a href="mailto:info@rivag.nl">{{ 'header.nav.mail' |_ }}</a>
+            </li>
+        </ul>
     </nav>
-</div>
+    <a id="langLink" href=""> <img id="langImg" src="" alt="Language" /> </a>
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const navMenu = document.getElementById("nav-menu");
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navMenu.classList.toggle("open");
+        });
+    </script>
 </header>
