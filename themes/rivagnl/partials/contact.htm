@@ -1,4 +1,6 @@
-<div id="contact_form">
+<!-- <div id="contact_form">
+<h2 id="contact">{{ 'contact' |_ }}</h2> 
+<p>{{ 'personeel.vacatures.interesse' |_ }}</p>
     <form data-request="{{ genericForm }}::onFormSubmit"
     action="post">
         {{ form_token() }}
@@ -95,4 +97,101 @@
         </button>
     </form>
 </div>
+</div> -->
+
+<div class="contact_informatie">
+    <div class="contact_container">
+        <h2 id="contact">{{ 'contact' |_ }}</h2>
+        <p>{{ 'personeel.vacatures.interesse' |_ }}</p>
+
+        <div class="contact_content">
+            <form data-request="{{ genericForm }}::onFormSubmit" method="post">
+                {{ form_token() }}
+                <div id="{{ genericForm }}_forms_flash"></div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="naam">{{ 'contact.naam' |_ }}</label>
+                        <input type="text" name="naam" id="naam" />
+                    </div>
+                    <div class="form-group">
+                        <label for="adres">{{ 'contact.adres' |_ }}</label>
+                        <input type="text" id="adres" name="adres" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postcode">{{ 'contact.postcode' |_ }}</label>
+                        <input type="text" id="postcode" name="postcode" />
+                    </div>
+                    <div class="form-group">
+                        <label for="plaats">{{ 'contact.plaats' |_ }}</label>
+                        <input type="text" id="plaats" name="plaats" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">{{ 'contact.email' |_ }}</label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoon">{{ 'contact.telefoon' |_ }}</label>
+                        <input type="tel" id="telefoon" name="telefoon" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fax">{{ 'contact.fax' |_ }}</label>
+                        <input type="tel" id="fax" name="fax" />
+                    </div>
+                    <div class="form-group">
+                        <label for="vacature">{{ 'contact.vacature' |_ }}</label>
+                        <select name="vacature" id="vacature">
+                            <option value="">{{ 'contact.vacature.keuze' |_ }}</option>
+                            <option value="kraanmachinist">
+                                {{ 'contact.kraanmachinist.keuze' |_ }}
+                            </option>
+                            <option value="torenkraanmachinist">
+                                {{ 'contact.torenkraanmachinist.keuze' |_ }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regio">{{ 'contact.regio' |_ }}</label>
+                        <select name="regio" id="regio">
+                            <option value="">{{ 'contact.regio.keuze' |_ }}</option>
+                            <option value="utrecht">
+                                {{ 'contact.utrecht.keuze' |_ }}
+                            </option>
+                            <option value="randstad">
+                                {{ 'contact.randstad.keuze' |_ }}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group full">
+                        <label for="opmerking">{{ 'contact.opmerking' |_ }}</label>
+                        <textarea name="opmerking" id="opmerking"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" id="simpleContactSubmitButton">
+                    {{ 'contact.submit' |_ }}
+                </button>
+            </form>
+
+            <div id="contact_image">
+                <img
+                    src="http://127.0.0.1:8000/themes/rivagnl/assets/img/69bf7361-e6f8-4b8d-a309-1b7cfdfa2b2e.JPG"
+                    alt="Contact Image"
+                />
+            </div>
+        </div>
+    </div>
 </div>
+
