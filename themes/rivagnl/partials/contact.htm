@@ -122,7 +122,9 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="postcode">{{ 'contact.postcode' |_ }}</label>
+                        <label for="postcode"
+                            >{{ 'contact.postcode' |_ }}</label
+                        >
                         <input type="text" id="postcode" name="postcode" />
                     </div>
                     <div class="form-group">
@@ -137,7 +139,9 @@
                         <input type="email" id="email" name="email" />
                     </div>
                     <div class="form-group">
-                        <label for="telefoon">{{ 'contact.telefoon' |_ }}</label>
+                        <label for="telefoon"
+                            >{{ 'contact.telefoon' |_ }}</label
+                        >
                         <input type="tel" id="telefoon" name="telefoon" />
                     </div>
                 </div>
@@ -148,14 +152,24 @@
                         <input type="tel" id="fax" name="fax" />
                     </div>
                     <div class="form-group">
-                        <label for="vacature">{{ 'contact.vacature' |_ }}</label>
+                        <label for="vacature"
+                            >{{ 'contact.vacature' |_ }}</label
+                        >
                         <select name="vacature" id="vacature">
-                            <option value="">{{ 'contact.vacature.keuze' |_ }}</option>
+                            <option value="">
+                                {{ 'contact.vacature.keuze' |_ }}
+                            </option>
                             <option value="kraanmachinist">
                                 {{ 'contact.kraanmachinist.keuze' |_ }}
                             </option>
                             <option value="torenkraanmachinist">
                                 {{ 'contact.torenkraanmachinist.keuze' |_ }}
+                            </option>
+                            <option value="rups-hijskraanmachinist">
+                                {{ 'contact.rupshijskraanmachinist.keuze' |_ }}
+                            </option>
+                            <option value="mobiele-hijskraanmachinist">
+                                {{ 'contact.mobielehijskraanmachinist.keuze' |_ }}
                             </option>
                         </select>
                     </div>
@@ -165,17 +179,27 @@
                     <div class="form-group">
                         <label for="regio">{{ 'contact.regio' |_ }}</label>
                         <select name="regio" id="regio">
-                            <option value="">{{ 'contact.regio.keuze' |_ }}</option>
+                            <option value="">
+                                {{ 'contact.regio.keuze' |_ }}
+                            </option>
                             <option value="utrecht">
                                 {{ 'contact.utrecht.keuze' |_ }}
                             </option>
                             <option value="randstad">
                                 {{ 'contact.randstad.keuze' |_ }}
                             </option>
+                            <option value="zuid-oost-nederland">
+                                {{ 'contact.zonederland.keuze' |_ }}
+                            </option>
+                            <option value="belgie">
+                                {{ 'contact.belgie.keuze' |_ }}
+                            </option>
                         </select>
                     </div>
                     <div class="form-group full">
-                        <label for="opmerking">{{ 'contact.opmerking' |_ }}</label>
+                        <label for="opmerking"
+                            >{{ 'contact.opmerking' |_ }}</label
+                        >
                         <textarea name="opmerking" id="opmerking"></textarea>
                     </div>
                 </div>
@@ -194,4 +218,3 @@
         </div>
     </div>
 </div>
-

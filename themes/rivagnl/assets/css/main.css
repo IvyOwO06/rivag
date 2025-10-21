@@ -96,7 +96,7 @@ header a {
     transform: translateY(7px) rotate(45deg);
 }
 .hamburger.active span:nth-child(2) {
-    opacity: 0;
+    opacity: 1;
 }
 .hamburger.active span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
@@ -436,7 +436,7 @@ footer p {
         font-size: 1.2rem;
     }
     #langLink {
-        display: none;
+        margin-left: 0rem;
     }
     nav ul {
         flex-wrap: wrap;
