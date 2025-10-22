@@ -123,7 +123,6 @@ nav a {
 }
 
 .welkomContainer {
-    background-image: url("http://127.0.0.1:8000/themes/rivagnl/assets/img/7.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
