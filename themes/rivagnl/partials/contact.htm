@@ -103,6 +103,10 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    {% partial '@recaptcha' %}
+                </div>
+
                 <button type="submit" id="simpleContactSubmitButton">
                     {{ 'contact.submit' |_ }}
                 </button>
