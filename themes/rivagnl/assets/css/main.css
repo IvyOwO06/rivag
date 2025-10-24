@@ -208,7 +208,7 @@ nav a {
     color: var(--dark-blue);
 
     padding: 1rem;
-    width: 100%;
+    width: 50%;
 
     margin-left: 2rem;
     margin-right: 2rem;
@@ -248,12 +248,14 @@ nav a {
 #bedrijf_image {
     display: flex;
     /* justify-content: center;*/
+    justify-content: flex-start;
+    align-items: center;
     flex: 2;
 } 
 
 #bedrijf_image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 90%;
     height: auto;
 
     margin-bottom: 2rem;
