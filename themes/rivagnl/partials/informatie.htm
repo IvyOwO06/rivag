@@ -23,7 +23,9 @@
 
         <div class="bedrijf_content">
             <div class="bedrijf_text">
-                <section class="personeel">{{ 'personeel.informatie' |_ }}</section>
+                <section class="personeel">
+                    {{ 'personeel.informatie' |_ }}
+                </section>
                 <p>{{ 'informatie.info.bedrijf' |_ }}</p>
                 <p>{{ 'informatie.info.verleden' |_ }}</p>
                 <p>{{ 'informatie.info.kennis' |_ }}</p>
@@ -37,9 +39,11 @@
                     <li>{{ 'informatie.info.bedienen.5' |_ }}</li>
                 </ul>
             </div>
-
             <div id="bedrijf_image">
-                <img src="{{ 'assets/img/18.jpg' | theme }}" alt="Bedrijf Image" />
+                <img
+                    src="{{ 'assets/img/18.jpg' | theme }}"
+                    alt="Bedrijf Image"
+                />
             </div>
         </div>
     </div>

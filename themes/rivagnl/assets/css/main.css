@@ -18,7 +18,6 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 200vh;
     margin: 0;
     font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
 }
@@ -148,7 +147,6 @@ nav a {
 }
 
 .welkomContainer ul {
-    color: var();
     text-align: left;
     list-style-type: square;
     margin: 0;
@@ -192,7 +190,7 @@ nav a {
     background-color: var(--grey);
     display: flex;
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 .bedrijf_content {
@@ -212,22 +210,24 @@ nav a {
     padding: 1rem;
     width: 100%;
 
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }
 
 .bedrijf_container strong {
     display: block;
     font-weight: bold;
     margin: 0;
-
     font-size: 1.1rem;
-    padding-top: 2rem;
+}
+
+.bedrijf_container p:first-of-type {
+    margin-top: 0.5rem;
 }
 
 .bedrijf_container p {
-    margin: 0;
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.5rem 0;
 }
 
 .bedrijf_text {
@@ -240,21 +240,23 @@ nav a {
     font-size: 1.8rem;
 }
 
+#personeel{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
 #bedrijf_image {
     display: flex;
-    justify-content: center;
-    justify-content: flex-end;
-    align-items: center;
-    flex: 1;
-}
+    /* justify-content: center;*/
+    flex: 2;
+} 
 
 #bedrijf_image img {
     width: 100%;
-    max-width: 570px;
+    max-width: 400px;
     height: auto;
 
     margin-bottom: 2rem;
-    margin-right: 1.5rem;
 
     border-radius: 1rem;
     box-shadow: 0 2px 8px var(--black2);
@@ -265,11 +267,11 @@ nav a {
 
 .personeel_container {
     background-color: var(--grey);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-#personeel{
+#personeel {
     margin: 0;
     margin-bottom: 1rem;
 }
@@ -301,8 +303,9 @@ nav a {
     box-shadow: 0 4px 10px var(--black2);
     padding: 1.5rem;
     width: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
+
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 .contact_container h2 {
     color: var(--dark-blue);
@@ -376,8 +379,6 @@ nav a {
     border: none;
     border-radius: 1.5rem;
 
-    /* margin: 1rem auto; */
-
     cursor: pointer;
     font-size: 1.2rem;
     display: block;
@@ -391,7 +392,6 @@ nav a {
 #contact_image {
     display: flex;
     justify-content: center;
-    justify-content: flex-end;
     align-items: center;
     flex: 1;
 }
@@ -524,12 +524,6 @@ footer p {
     form {
         width: 100%;
     }
-    #contact_image img {
-        /* width: 100%;
-        max-width: 100%; */
-        /* margin-right: 0; */
-        display: none;
-    }
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -545,11 +539,10 @@ footer p {
         align-items: center;
         gap: 2rem;
     }
-    #contact_image {
-        /* margin-top: 1.5rem; */
-        width: 100%;
-        justify-content: center;
-        margin-top: 1rem;
+
+    #contact_image,
+    #bedrijf_image {
+        display: none;
     }
 }
 
