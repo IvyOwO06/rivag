@@ -188,21 +188,21 @@ nav a {
 
 /* BEDFRIJF */
 
-.informatie {
+.bedrijf_informatie {
     background-color: var(--grey);
     display: flex;
     justify-content: center;
     padding-top: 1rem;
 }
 
-.content {
+.bedrijf_content {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3rem;
 }
 
-.informatie > .container {
+.bedrijf_informatie > .bedrijf_container {
     background-color: var(--white);
     border: 1px solid var(--black2);
     border-radius: 1rem;
@@ -216,7 +216,7 @@ nav a {
     margin-right: 1rem;
 }
 
-.container strong {
+.bedrijf_container strong {
     display: block;
     font-weight: bold;
     margin: 0;
@@ -225,12 +225,12 @@ nav a {
     padding-top: 2rem;
 }
 
-.container p {
+.bedrijf_container p {
     margin: 0;
     margin-bottom: 1.5rem;
 }
 
-.text {
+.bedrijf_text {
     flex: 2;
 }
 
