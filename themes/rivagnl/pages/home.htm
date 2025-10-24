@@ -10,6 +10,7 @@ rules[plaats] = "required"
 rules[email] = "required|email"
 rules[telefoon] = "regex:/^(\+?[0-9]{1,3}[\s\-]?[0-9\s\-]{5,15})$/"
 rules[fax] = "regex:/^(\+?[0-9]{1,3}[\s\-]?[0-9\s\-]{5,15})$/"
+rules[g-recaptcha-response] = "required"
 rules_messages[naam.required] = "naam.contact.vereist"
 rules_messages[naam.regex] = "naam.contact.ongeldig"
 rules_messages[adres.required] = "adres.contact.vereist"
@@ -19,6 +20,7 @@ rules_messages[email.required] = "email.contact.vereist"
 rules_messages[email.email] = "email.contact.ongeldig"
 rules_messages[telefoon.regex] = "telefoon.contact.ongeldig"
 rules_messages[fax.regex] = "fax.contact.ongeldig"
+rules_messages[g-recaptcha-response.required] = "recaptcha.contact.vereist"
 messages_success = "bericht.contact.succes"
 messages_errors = "bericht.contact.error"
 mail_enabled = 0
@@ -26,10 +28,6 @@ reset_form = 1
 inline_errors = "disabled"
 sanitize_data = "htmlspecialchars"
 anonymize_ip = "disabled"
-recaptcha_enabled = 1
-recaptcha_theme = "light"
-recaptcha_type = "image"
-recaptcha_size = "normal"
 emails_date_format = "Y-m-d"
 ==
 {% partial "test" %}
