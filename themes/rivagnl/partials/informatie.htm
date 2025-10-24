@@ -20,20 +20,27 @@
 <div class="bedrijf_informatie">
     <div class="bedrijf_container">
         <h2 id="bedrijf">{{ 'bedrijf' |_ }}</h2>
-        <section class="personeel">
-            {{ 'personeel.informatie' |_ }}
-        </section>
-        <p>{{ 'informatie.info.bedrijf' |_ }}</p>
-        <p>{{ 'informatie.info.verleden' |_ }}</p>
-        <p>{{ 'informatie.info.kennis' |_ }}</p>
-        <p>{{ 'informatie.info.rivag' |_ }}</p>
-        <p>{{ 'informatie.info.bedienen' |_ }}</p>
-        <ul>
-            <li>{{ 'informatie.info.bedienen.1' |_ }}</li>
-            <li>{{ 'informatie.info.bedienen.2' |_ }}</li>
-            <li>{{ 'informatie.info.bedienen.3' |_ }}</li>
-            <li>{{ 'informatie.info.bedienen.4' |_ }}</li>
-            <li>{{ 'informatie.info.bedienen.5' |_ }}</li>
-        </ul>
+
+        <div class="bedrijf_content">
+            <div class="bedrijf_text">
+                <section class="personeel">{{ 'personeel.informatie' |_ }}</section>
+                <p>{{ 'informatie.info.bedrijf' |_ }}</p>
+                <p>{{ 'informatie.info.verleden' |_ }}</p>
+                <p>{{ 'informatie.info.kennis' |_ }}</p>
+                <p>{{ 'informatie.info.rivag' |_ }}</p>
+                <p>{{ 'informatie.info.bedienen' |_ }}</p>
+                <ul>
+                    <li>{{ 'informatie.info.bedienen.1' |_ }}</li>
+                    <li>{{ 'informatie.info.bedienen.2' |_ }}</li>
+                    <li>{{ 'informatie.info.bedienen.3' |_ }}</li>
+                    <li>{{ 'informatie.info.bedienen.4' |_ }}</li>
+                    <li>{{ 'informatie.info.bedienen.5' |_ }}</li>
+                </ul>
+            </div>
+
+            <div id="bedrijf_image">
+                <img src="{{ 'assets/img/18.jpg' | theme }}" alt="Bedrijf Image" />
+            </div>
+        </div>
     </div>
 </div>

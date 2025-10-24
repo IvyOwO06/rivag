@@ -189,22 +189,31 @@ nav a {
 /* BEDFRIJF */
 
 .bedrijf_informatie {
-    background-color: var(--grey); /* grey background around the box */
-    padding: 2rem 0; /* space around the inner box */
+    background-color: var(--grey);
     display: flex;
     justify-content: center;
+    padding: 1rem;
+}
+
+.bedrijf_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .bedrijf_informatie > .bedrijf_container {
-    background-color: var(--white); /* white inner box */
+    background-color: var(--white);
     border: 1px solid var(--black2);
     border-radius: 1rem;
     box-shadow: 0 4px 10px var(--black2);
-    padding: 2rem;
-    max-width: 900px;
-    width: 90%;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    color: var(--dark-blue);
+
+    padding: 1rem;
+    width: 100%;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .bedrijf_container strong {
@@ -218,11 +227,40 @@ nav a {
     margin-bottom: 1.5rem;
 }
 
+.bedrijf_text {
+    flex: 2;
+}
+
+#bedrijf {
+    margin: 0;
+    text-transform: uppercase;
+    
+}
+
 .bedrijf_container strong {
     font-size: 1.1rem;
-    /* color: var(--dark-blue); */
     padding-top: 2rem;
     margin-bottom: 0;
+}
+
+#bedrijf_image {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+#bedrijf_image img {
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px var(--black2);
+    object-fit: cover;
+/* 
+    margin: 0 auto; */
 }
 
 /* PERSONEEL */
@@ -236,9 +274,6 @@ nav a {
 
 .contact_content {
     display: flex;
-    /* align-items: flex-start;
-    justify-content: space-between;
-    gap: 2rem; */
     align-items: center;
     justify-content: center;
     gap: 3rem;
@@ -337,9 +372,6 @@ nav a {
     border: none;
     border-radius: 1.5rem;
 
-    /* margin-right: 15rem;
-    margin-left: 15rem; */
-
     margin: 1rem auto;
 
     cursor: pointer;
@@ -351,24 +383,30 @@ nav a {
 .contact_container button:hover {
     background-color: var(--blue);
 }
+
 #contact_image {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     justify-content: flex-end;
     align-items: center;
     flex: 1;
 }
 #contact_image img {
     width: 100%;
-    max-width: 420px;
+    max-width: 570px;
     height: auto;
 
     border-radius: 1rem;
     box-shadow: 0 2px 8px var(--black2);
     object-fit: cover;
 
-    margin: 0 auto;
+    margin-bottom: 2rem;
 }
+
+.alert {
+    color: var(--dark-blue);
+}
+
 /* FOOTER */
 
 footer {
@@ -477,7 +515,8 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
-    #contact_form, form {
+    #contact_form,
+    form {
         width: 100%;
     }
     #contact_image img {
