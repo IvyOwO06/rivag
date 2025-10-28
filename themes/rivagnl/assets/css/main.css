@@ -542,6 +542,10 @@ footer p {
         gap: 2rem;
     }
 
+    .bedrijf_informatie > .bedrijf_container {
+        width: 100%;
+    }
+
     #contact_image,
     #bedrijf_image {
         display: none;
