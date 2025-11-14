@@ -10,6 +10,12 @@
     --dark-blue: hsl(216, 26%, 51%);
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -123,13 +129,14 @@ nav a {
 }
 
 .welkomContainer {
+    background-image: url("http://127.0.0.1:8000/themes/rivagnl/assets/img/7.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center 35%;
 
     width: 100%;
-    height: 20vh;
+    height: 30vh;
 
     display: flex;
     flex-direction: column;
@@ -230,14 +237,9 @@ nav a {
     font-size: 3rem;
 }
 
-#personeel {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-#bedrijf_image {
+/* #bedrijf_image {
     display: flex;
-    /* justify-content: center;*/
+    justify-content: center;
     justify-content: flex-start;
     align-items: center;
     flex: 2;
@@ -253,27 +255,130 @@ nav a {
     border-radius: 1rem;
     box-shadow: 0 2px 8px var(--black2);
     object-fit: cover;
-}
+} */
 
 .bedrijf_info_row {
     display: flex;
-    justify-content: space-between; /* spreads them evenly */
-    gap:3rem; /* space between the paragraphs */
-    text-align: center; /* optional, for readability */
-    padding: 1rem;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: center;
     padding-top: 2rem;
 }
 
 .bedrijf_info_row p {
-    flex: 1; /* make them equal width */
-    margin: 0; /* reset margin to align neatly */
-    font-size: 0.8rem;
+    flex: 1;
+    max-width: 350px;
+    margin: 0 auto;
+    font-size: 1rem;
 }
 
 /* PERSONEEL */
 
-#personeel_container {
-    background-color: var(--white);
+.personeel_container {
+    background: var(--grey);
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.personeel_section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.personeel_section .personeel_image {
+    order: 1;
+}
+.personeel_section .personeel_text {
+    order: 2;
+}
+
+.personeel_section.image-right .personeel_image {
+    order: 2;
+}
+.personeel_section.image-right .personeel_text {
+    order: 1;
+}
+
+.personeel_section.image-left .personeel_image {
+    order: 1;
+}
+.personeel_section.image-left .personeel_text {
+    order: 2;
+}
+
+.personeel_text {
+    flex: 1.2;
+    color: var(--dark-blue);
+    font-size: 0.9rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+
+#personeel {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.personeel_text ul {
+    padding-left: 1.4rem;
+}
+
+.personeel_image {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.personeel_image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+#numberTwo {
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner {
+    background-image: url("http://127.0.0.1:8000/themes/rivagnl/assets/img/30.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 30%;
+
+    width: 100%;
+    height: 35vh;
+}
+
+/* MOBILE */
+@media screen and (max-width: 800px) {
+    .personeel_section,
+    .personeel_section.image-right,
+    .personeel_section.image-left {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    /* keep image full-width on mobile */
+    .personeel_image img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* make text full width on small screens */
+    .personeel_text {
+        width: 100%;
+    }
 }
 
 /* CONTACT */
@@ -291,7 +396,7 @@ nav a {
 
 .contact_informatie {
     background-color: var(--white);
-    padding: 1rem 0;
+    padding: 2rem;
     display: flex;
     justify-content: center;
 }
@@ -411,16 +516,6 @@ nav a {
     color: var(--dark-blue);
 }
 
-#banner img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center 35%;
-
-    width: 100%;
-    height: 40vh;
-}
-
 /* FOOTER */
 
 footer {
@@ -446,9 +541,15 @@ footer p {
 /* MOBILE */
 
 @media screen and (max-width: 600px) {
+    html,
+    body {
+        overflow-x: hidden; /* enforce no horizontal scroll */
+    }
+
     .hamburger {
         display: flex;
     }
+
     header {
         flex-direction: column;
         align-items: center;
@@ -486,11 +587,11 @@ footer p {
         position: relative;
     }
     #welkom {
-        font-weight: bold;
+        /* font-weight: bold; */
         font-size: 2.5rem;
-        margin: 0;
+        /* margin: 0;
         color: var(--white);
-        text-shadow: 1px 0 5px var(--black);
+        text-shadow: 1px 0 5px var(--black); */
     }
     .welkomContainer p {
         font-size: 1rem;
@@ -558,18 +659,98 @@ footer p {
         width: 100%;
     }
 
+    .bedrijf_content,
+    .contact_content,
+    .bedrijf_informatie,
+    .contact_container,
+    .personeel_section {
+        flex-direction: column !important;
+        width: 100%;
+        max-width: 100%;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    .bedrijf_informatie > .bedrijf_container,
+    .contact_container form,
+    .personeel_text,
+    .personeel_image {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .personeel_image img,
+    #numberTwo,
+    #contact_image img,
+    #bedrijf_image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
     #contact_image,
     #bedrijf_image {
         display: none;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem 0;
+    }
+
+    #contact_form button {
+        width: 100%;
     }
 }
 
 /* TABLET(?) */
 
-@media screen and (max-width: 720px) {
-}
+@media screen and (max-width: 1024px) {
+    html,
+    body {
+        overflow-x: hidden; /* enforce no horizontal scroll */
+    }
 
-/* TV/BIGGER MONITORS */
+    .bedrijf_info_row,
+    .bedrijf_content,
+    .contact_content {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        gap: 1rem;
+        padding: 0 1rem;
+        margin: 0;
+    }
 
-@media screen and (max-width: 1700px) {
+    .bedrijf_content,
+    .contact_content {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .bedrijf_informatie > .bedrijf_container,
+    .contact_container form,
+    #contact_image {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .personeel_text,
+    .personeel_image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .personeel_image img,
+    #numberTwo,
+    #contact_image img,
+    #bedrijf_image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 }

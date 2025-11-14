@@ -1,4 +1,4 @@
-<div class="personeel_container">
+<!-- <div class="personeel_container">
     <div>
         <h2 id="personeel">{{ 'personeel' |_ }}</h2>
         <section class="personeel">{{ 'personeel.informatie' |_ }}</section>
@@ -50,8 +50,76 @@
             <li>{{ 'personeel.vacatures.regio.3' |_ }}</li>
             <li>{{ 'personeel.vacatures.regio.4' |_ }}</li>
         </ul>
-        <div id="banner">
-            <img src="{{ 'assets/img/18.jpg' | theme }}" alt="Crane Image" />
+    </div>
+</div>
+<div id="banner">
+    <img src="{{ 'assets/img/cropped_32_9.png' | theme }}" alt="Crane Image" />
+</div> -->
+
+<div class="personeel_container">
+    <!-- SECTION 1 — Image Left / Text Right (image-left optional) -->
+    <div class="personeel_section image-left">
+        <div class="personeel_image">
+            <img
+                src="http://127.0.0.1:8000/themes/rivagnl/assets/img/18.jpg"
+                alt="Personeel image"
+            />
+        </div>
+
+        <div class="personeel_text">
+            <h2 id="personeel">{{ 'personeel' |_ }}</h2>
+            <section class="personeel">{{ 'personeel.informatie' |_ }}</section>
+            <p>{{ 'personeel.info.taken' |_ }}</p>
+            <ul>
+                <li>{{ 'personeel.info.taak.1' |_ }}</li>
+                <li>{{ 'personeel.info.taak.2' |_ }}</li>
+                <li>{{ 'personeel.info.taak.3' |_ }}</li>
+                <li>{{ 'personeel.info.taak.4' |_ }}</li>
+                <li>{{ 'personeel.info.taak.5' |_ }}</li>
+                <li>{{ 'personeel.info.taak.6' |_ }}</li>
+                <li>{{ 'personeel.info.taak.7' |_ }}</li>
+                <li>{{ 'personeel.info.taak.8' |_ }}</li>
+                <li>{{ 'personeel.info.taak.9' |_ }}</li>
+            </ul>
+            <p>{{ 'personeel.info.eisen' |_ }}</p>
+            <p>{{ 'personeel.info.kennis' |_ }}</p>
+            <p>{{ 'personeel.info.persoonlijkekwaliteiten' |_ }}</p>
+            <p>{{ 'personeel.info.fysiekekwaliteiten' |_ }}</p>
+        </div>
+    </div>
+
+    <!-- SECTION 2 — Text Left / Image Right -->
+    <div class="personeel_section image-right">
+        <div class="personeel_image" id="numberTwo">
+            <img src="http://127.0.0.1:8000/themes/rivagnl/assets/img/28.jpg" />
+        </div>
+
+        <div class="personeel_text">
+            <p><strong>{{ 'personeel.eisen.eisen' |_ }}</strong></p>
+            <ul>
+                <li>{{ 'personeel.eisen.eis.1' |_ }}</li>
+                <li>{{ 'personeel.eisen.eis.2' |_ }}</li>
+                <li>{{ 'personeel.eisen.eis.3' |_ }}</li>
+                <li>{{ 'personeel.eisen.eis.4' |_ }}</li>
+                <li>{{ 'personeel.eisen.eis.5' |_ }}</li>
+                <li>{{ 'personeel.eisen.eis.6' |_ }}</li>
+                <li>{{ 'personeel.eisen.eis.7' |_ }}</li>
+                <li>{{ 'personeel.eisen.eis.8' |_ }}</li>
+            </ul>
+
+            <p><strong>{{ 'personeel.vacatures.gevraagd' |_ }}</strong></p>
+            <p>{{ 'personeel.vacatures.zoeken' |_ }}</p>
+            <ul>
+                <li>{{ 'personeel.vacatures.bechikbaar.2' |_ }}</li>
+            </ul>
+            <p>{{ 'personeel.vacatures.regio' |_ }}</p>
+            <ul>
+                <li>{{ 'personeel.vacatures.regio.1' |_ }}</li>
+                <li>{{ 'personeel.vacatures.regio.2' |_ }}</li>
+                <li>{{ 'personeel.vacatures.regio.3' |_ }}</li>
+                <li>{{ 'personeel.vacatures.regio.4' |_ }}</li>
+            </ul>
         </div>
     </div>
 </div>
+<div class="banner"></div>
