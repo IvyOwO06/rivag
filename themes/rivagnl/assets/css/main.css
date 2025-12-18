@@ -1,23 +1,23 @@
 :root {
     --black: hsl(0, 0%, 0%);
     --black2: hsla(0, 0%, 0%, 0.37);
-
     --white: hsl(0, 0%, 100%);
-    --grey: hsl(0, 0%, 92%);
-
-    /* --light-blue: hsl(212, 100%, 93%); */
+    --grey: hsl(0, 0%, 92%); /* --light-blue: hsl(212, 100%, 93%); */
     --blue: hsl(210, 50%, 40%);
     --dark-blue: hsl(216, 26%, 51%);
 }
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
+}
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -28,13 +28,11 @@ body {
     margin: 0;
     font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
 }
-
 main {
     flex: 1;
     margin-bottom: 0;
     padding-bottom: 0;
 }
-
 header {
     background-color: var(--dark-blue);
     display: flex;
@@ -44,11 +42,11 @@ header {
     box-sizing: border-box;
     position: relative;
 }
-
 .header-right {
     text-align: right;
+    width: 100%;
+    overflow-x: hidden;
 }
-
 .header-right ul {
     margin: 0 auto;
     text-align: center;
@@ -57,15 +55,12 @@ header {
 .header-right li {
     margin: 0 auto;
 }
-
 .header-right.open {
     max-height: 300px;
 }
-
 .logo {
     display: inline-block;
 }
-
 .logo h1 {
     color: var(--black);
     font-size: 2.5rem;
@@ -73,11 +68,9 @@ header {
     font-family: "Times New Roman", Times, serif;
     text-transform: uppercase;
 }
-
 header a {
     text-decoration: none;
 }
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -89,7 +82,6 @@ header a {
     border: none;
     padding: 0;
 }
-
 .hamburger span {
     display: block;
     height: 3px;
@@ -98,7 +90,6 @@ header a {
     border-radius: 2px;
     transition: all 0.3s ease;
 }
-
 .hamburger.active span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
@@ -108,7 +99,6 @@ header a {
 .hamburger.active span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
-
 nav ul {
     display: flex;
     gap: 2rem;
@@ -116,7 +106,6 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-
 nav li {
     color: var(--black);
     text-transform: lowercase;
@@ -127,51 +116,42 @@ nav a {
     font-size: 1rem;
     text-transform: uppercase;
 }
-
 .welkomContainer {
-    background-image: url("http://127.0.0.1:8000/themes/rivagnl/assets/img/7.jpg");
+    background-image: url("/themes/rivagnl/assets/img/7.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center 35%;
-
     width: 100%;
     height: 30vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
     gap: 1rem;
     padding-top: 5%;
     padding-bottom: 5%;
 }
-
 .welkomContainer p,
 .welkomContainer h1 {
     text-align: center;
 }
-
 .welkomContainer ul {
     text-align: left;
     list-style-type: square;
     margin: 0;
     padding: 0;
 }
-
 .welkomContainer li::marker {
     color: var(--white);
 }
-
 .welkomContainer p {
     font-size: 1.5rem;
     font-weight: normal;
     color: var(--white);
     text-shadow: 1px 0 5px var(--black);
 }
-
 #welkom {
     font-weight: bold;
     font-size: 3.5rem;
@@ -179,7 +159,6 @@ nav a {
     color: var(--white);
     text-shadow: 1px 0 5px var(--black);
 }
-
 #langLink {
     display: flex;
     align-items: center;
@@ -190,72 +169,55 @@ nav a {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-}
-
-/* BEDFRIJF */
-
+} /* BEDFRIJF */
 .bedrijf_informatie {
     background-color: var(--white);
     display: flex;
     justify-content: center;
     padding-top: 1rem;
 }
-
 .bedrijf_content {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3rem;
 }
-
 .bedrijf_informatie > .bedrijf_container {
-    /* background-color: var(--white);
-    border: 1px solid var(--black2);
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px var(--black2); */
+    /* background-color: var(--white); border: 1px solid var(--black2); border-radius: 1rem; box-shadow: 0 4px 10px var(--black2); */
     color: var(--dark-blue);
-
     text-align: center;
-
     width: 50%;
 }
-
 .bedrijf_container strong {
     display: block;
     font-weight: bold;
     margin: 0;
     font-size: 1.1rem;
 }
-
 .bedrijf_container p:first-of-type {
     margin-top: 0.5rem;
 }
-
 #bedrijf {
     margin: 0;
     text-transform: uppercase;
     font-size: 3rem;
 }
-
-/* #bedrijf_image {
-    display: flex;
-    justify-content: center;
-    justify-content: flex-start;
-    align-items: center;
-    flex: 2;
-}
-
-#bedrijf_image img {
+/*
+#bedrijf_image { 
+    display: flex; 
+    justify-content: center; 
+    justify-content: flex-start; 
+    align-items: center; flex: 2; 
+    } 
+#bedrijf_image img { 
     width: 100%;
     max-width: 90%;
-    height: auto;
-
+    height: auto; 
     margin-bottom: 2rem;
-
-    border-radius: 1rem;
+    border-radius: 1rem; 
     box-shadow: 0 2px 8px var(--black2);
-    object-fit: cover;
-} */
+    object-fit: cover; } 
+    */
 
 .bedrijf_info_row {
     display: flex;
@@ -264,7 +226,6 @@ nav a {
     text-align: center;
     padding-top: 2rem;
 }
-
 .bedrijf_info_row p {
     flex: 1;
     max-width: 350px;
@@ -281,35 +242,30 @@ nav a {
     flex-direction: column;
     gap: 4rem;
 }
-
 .personeel_section {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     gap: 3rem;
 }
-
 .personeel_section .personeel_image {
     order: 1;
 }
 .personeel_section .personeel_text {
     order: 2;
 }
-
 .personeel_section.image-right .personeel_image {
     order: 2;
 }
 .personeel_section.image-right .personeel_text {
     order: 1;
 }
-
 .personeel_section.image-left .personeel_image {
     order: 1;
 }
 .personeel_section.image-left .personeel_text {
     order: 2;
 }
-
 .personeel_text {
     flex: 1.2;
     color: var(--dark-blue);
@@ -318,64 +274,51 @@ nav a {
     padding-top: 2rem;
     padding-right: 2rem;
 }
-
 #personeel {
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
 }
-
 .personeel_text ul {
     padding-left: 1.4rem;
 }
-
 .personeel_image {
     flex: 1;
     display: flex;
     align-items: flex-start;
 }
-
 .personeel_image img {
     width: 100%;
     max-width: 400px;
     height: auto;
     object-fit: cover;
 }
-
 #numberTwo {
     max-width: 320px;
     height: auto;
     object-fit: cover;
 }
-
 .banner {
-    background-image: url("http://127.0.0.1:8000/themes/rivagnl/assets/img/30.jpg");
+    background-image: url("/themes/rivagnl/assets/img/30.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center 30%;
-
     width: 100%;
     height: 35vh;
 }
-
 /* MOBILE */
+
 @media screen and (max-width: 800px) {
-    .personeel_section,
-    .personeel_section.image-right,
-    .personeel_section.image-left {
+    .personeel_section {
         flex-direction: column;
         text-align: left;
-    }
-
-    /* keep image full-width on mobile */
+    } /* keep image full-width on mobile */
     .personeel_image img {
         max-width: 100%;
         margin-bottom: 1rem;
-    }
-
-    /* make text full width on small screens */
+    } /* make text full width on small screens */
     .personeel_text {
         width: 100%;
     }
@@ -389,25 +332,21 @@ nav a {
     justify-content: center;
     gap: 3rem;
 }
-
 .contact_content form {
     flex: 1.2;
 }
-
 .contact_informatie {
     background-color: var(--white);
     padding: 2rem;
     display: flex;
     justify-content: center;
 }
-
 .contact_container {
-    /* background-color: var(--white);
-    border: 1px solid var(--black2);
-    border-radius: 1rem;
+    /* background-color: var(--white); 
+    border: 1px solid var(--black2); 
+    border-radius: 1rem; 
     box-shadow: 0 4px 10px var(--black2); */
     width: 100%;
-
     margin-left: 2rem;
     margin-right: 2rem;
 }
@@ -448,7 +387,6 @@ nav a {
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
 }
-
 .contact_container input[type="text"],
 .contact_container input[type="email"],
 .contact_container input[type="tel"],
@@ -463,7 +401,6 @@ nav a {
     transition: all 0.3s ease;
     box-sizing: border-box;
 }
-
 .contact_container input:focus,
 .contact_container select:focus,
 .contact_container textarea:focus {
@@ -479,10 +416,8 @@ nav a {
     background-color: var(--dark-blue);
     color: var(--white);
     font-weight: bold;
-
     border: none;
     border-radius: 1.5rem;
-
     cursor: pointer;
     font-size: 1.2rem;
     display: block;
@@ -492,7 +427,6 @@ nav a {
 .contact_container button:hover {
     background-color: var(--blue);
 }
-
 #contact_image {
     display: flex;
     justify-content: center;
@@ -503,15 +437,12 @@ nav a {
     width: 100%;
     max-width: 450px;
     height: auto;
-
     border-radius: 1rem;
     box-shadow: 0 2px 8px var(--black2);
     object-fit: cover;
-
     margin-bottom: 2rem;
     margin-right: 2rem;
 }
-
 .alert {
     color: var(--dark-blue);
 }
@@ -526,7 +457,7 @@ footer {
     margin-top: 0;
     bottom: 0;
     width: 100%;
-    height: 15%;
+    padding: 1.5rem 0;
 }
 
 footer a {
@@ -545,11 +476,9 @@ footer p {
     body {
         overflow-x: hidden; /* enforce no horizontal scroll */
     }
-
     .hamburger {
         display: flex;
     }
-
     header {
         flex-direction: column;
         align-items: center;
@@ -589,8 +518,7 @@ footer p {
     #welkom {
         /* font-weight: bold; */
         font-size: 2.5rem;
-        /* margin: 0;
-        color: var(--white);
+        /* margin: 0; color: var(--white); 
         text-shadow: 1px 0 5px var(--black); */
     }
     .welkomContainer p {
@@ -602,11 +530,6 @@ footer p {
     .logo {
         display: inline-block;
     }
-
-    nav a {
-        color: var(--white);
-        font-size: 1.2rem;
-    }
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -616,7 +539,6 @@ footer p {
     #langLink {
         margin-left: 0rem;
     }
-
     footer {
         width: 100%;
         height: 10%;
@@ -625,15 +547,9 @@ footer p {
         text-align: center;
         font-size: 1rem;
     }
-
     .bedrijf_info_row {
         flex-direction: column;
         gap: 1rem;
-    }
-
-    #contact_form_container {
-        flex-direction: column;
-        align-items: center;
     }
     #contact_form,
     form {
@@ -645,8 +561,9 @@ footer p {
     #contact_form button {
         width: 100%;
     }
-    #contact_form h2 {
-        font-size: 1.6rem;
+
+    .contact_informatie{
+        padding: 1rem;
     }
     .contact_content {
         flex-direction: column;
@@ -654,12 +571,9 @@ footer p {
         align-items: center;
         gap: 2rem;
     }
-
     .bedrijf_informatie > .bedrijf_container {
         width: 100%;
     }
-
-    .bedrijf_content,
     .contact_content,
     .bedrijf_informatie,
     .contact_container,
@@ -670,16 +584,14 @@ footer p {
         gap: 1rem;
         margin: 0;
     }
-
     .bedrijf_informatie > .bedrijf_container,
     .contact_container form,
-    .personeel_text,
-    .personeel_image {
+    .personeel_text{
         width: 100%;
         max-width: 100%;
         margin: 0;
+        padding: 1.5rem;
     }
-
     .personeel_image img,
     #numberTwo,
     #contact_image img,
@@ -689,22 +601,21 @@ footer p {
         height: auto;
         margin: 0;
     }
-
     #contact_image,
     #bedrijf_image {
         display: none;
     }
-
     .form-row {
         grid-template-columns: 1fr;
         gap: 0.5rem 0;
     }
-
     #contact_form button {
         width: 100%;
     }
+    #numberTwo {
+        display: none;
+    }
 }
-
 /* TABLET(?) */
 
 @media screen and (max-width: 1024px) {
@@ -712,7 +623,6 @@ footer p {
     body {
         overflow-x: hidden; /* enforce no horizontal scroll */
     }
-
     .bedrijf_info_row,
     .bedrijf_content,
     .contact_content {
@@ -723,34 +633,17 @@ footer p {
         padding: 0 1rem;
         margin: 0;
     }
-
     .bedrijf_content,
     .contact_content {
         flex-direction: column;
         width: 100%;
         gap: 1rem;
     }
-
     .bedrijf_informatie > .bedrijf_container,
     .contact_container form,
     #contact_image {
         width: 100%;
         max-width: 100%;
         margin: 0;
-    }
-
-    .personeel_text,
-    .personeel_image {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .personeel_image img,
-    #numberTwo,
-    #contact_image img,
-    #bedrijf_image img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
     }
 }
